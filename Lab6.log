@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.22)  19 AUG 2020 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.22)  19 AUG 2020 14:37
 entering extended mode
-**./Lab1.tex
-(Lab1.tex
+**./Lab6.tex
+(Lab6.tex
 LaTeX2e <2018-12-01>
 ("C:\Users\johnsor\AppData\Local\Programs\MiKTeX 2.9\tex/latex/exam\exam.cls"
 Document Class: exam 2017/12/17 Version 2.603 by Philip Hirschhorn
@@ -881,19 +881,19 @@ Package minitoc Info: I0028
 \mtc@hstrutbox=\box73
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
-\openout4 = `Lab1.mtc0'.
+\openout4 = `Lab6.mtc0'.
 
-\openout4 = `Lab1.mtc'.
+\openout4 = `Lab6.mtc'.
 
- (Lab1.mtc0)
+ (Lab6.mtc0)
 Package minitoc Info: I0012
 (minitoc)             Long extensions (Unix-like) will be used.
 Package minitoc Info: I0031
 (minitoc)             ==> this version is configured for UNIX-like 
 (minitoc)                 (long extensions) file names.
-\openout4 = `Lab1.mtc'.
+\openout4 = `Lab6.mtc'.
 
-\openout4 = `Lab1.mtc0'.
+\openout4 = `Lab6.mtc0'.
 
 \c@ptc=\count194
 \c@parttocdepth=\count195
@@ -934,8 +934,8 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \TX@delta=\dimen266
 \TX@cols=\count198
 \TX@ftn=\toks50
-) (Lab1.aux)
-\openout1 = `Lab1.aux'.
+) (Lab6.aux)
+\openout1 = `Lab6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -1086,41 +1086,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-<images/geo.png, id=4, 307.90031pt x 309.40594pt>
-File: images/geo.png Graphic file (type png)
-<use images/geo.png>
-Package pdftex.def Info: images/geo.png  used on input line 84.
-(pdftex.def)             Requested size: 289.07999pt x 290.51585pt.
 [1
 
-{C:/Users/johnsor/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/
-geo.png>] [2]
-This exam contains 5 questions with 0 parts, 0 subparts, and 0 subsubparts.
+{C:/Users/johnsor/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+This exam contains 3 questions with 0 parts, 0 subparts, and 0 subsubparts.
 This exam has a total of 25 points.
 This exam has a total of 0 bonus points.
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
-(minitoc)             Creating the Lab1.maf file.
-\openout4 = `Lab1.maf'.
+(minitoc)             Creating the Lab6.maf file.
+\openout4 = `Lab6.maf'.
 
 Package minitoc(hints) Info: I0019
 (minitoc(hints))             No hints have been written 
-(minitoc(hints))             in the Lab1.log file..
-(Lab1.aux) ) 
+(minitoc(hints))             in the Lab6.log file..
+(Lab6.aux) ) 
 Here is how much of TeX's memory you used:
- 27949 strings out of 492895
- 669104 string characters out of 3122801
- 834190 words of memory out of 3000000
- 31193 multiletter control sequences out of 15000+200000
+ 27929 strings out of 492895
+ 668820 string characters out of 3122801
+ 834113 words of memory out of 3000000
+ 31176 multiletter control sequences out of 15000+200000
  8914 words of font info for 36 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,10n,96p,724b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/johnsor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/johnsor/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on Lab1.pdf (2 pages, 194384 bytes).
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/johnsor/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on Lab6.pdf (1 page, 44830 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
