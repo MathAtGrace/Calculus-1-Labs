@@ -24,11 +24,13 @@
 \usepackage{pdfpages}
 \usepackage{minitoc} %% Required
 \usepackage{tabularx}
+\usepackage{hyperref}
+
 
 % Here's where you edit the Class, Exam, Date, etc.
 \newcommand{\class}{Calculus I}
 \newcommand{\term}{Fall 2020}
-\newcommand{\examnum}{Lab 6}
+\newcommand{\examnum}{Lab 8}
 \newcommand{\examdate}{August 20, 2020}
 
 % For an exam, single spacing is most appropriate
@@ -60,7 +62,7 @@
 	
 Show all your work, cite your sources, and type your answers for full credit.\\
 
-Materials needed: tape measure and nerf gun.
+Materials needed: paper and scotch tape
 	
 	\rule[1ex]{\textwidth}{.1pt}
 	
@@ -70,12 +72,32 @@ Materials needed: tape measure and nerf gun.
 		
 		\addpoints
 		
-		\question[5] You have a bicyclist riding his bike at 2ft./sec on a bridge that is 6ft. tall traveling east.  You have a kayaker paddling under the bridge at 3ft./sec traveling south.  The kayaker arrives directly under the center of the bridge 1 second before the bike reaches the center of the bridge.  They both travel for 4 seconds after the bike passes the center of the bridge.  How fast are they separating?
+		\question[15]
+		Use hourly data to find the average temperature during the past 24 hours.
+		Go to \url{https://w1.weather.gov/data/obhistory/KFWA.html} and enter the temperature each hour from the past 24 hours into a Desmos table.  Then try fitting different a cubic polynomial to the data ($y_1 \sim ax_1^3 + bx_1^2 + cx_1 + d$)
+		\begin{parts}
+			\part Export a picture of your graph and put it into this lab report.
+			\part What is the absolute maximum/minimum temperature during 24 hours from the data?
+			\part What is the absolute maximum/minimum temperature estimate using the trendline?
+			\part Explain why there is a difference between your answers to the two parts above.
+		\end{parts}
 		
-		\question[10] You and a friend are in front of the Science Building.  You head inside for Calculus class and your friend walks to Jazzman’s to grab some coffee.  How quickly is the distance between you and your friend increasing after 5 seconds, assuming that you both walk in straight lines for those 5 seconds?  (Hint:  Law of Cosines)
+		\question[5]
+		When a critically damped RLC circuit is connected to a voltage source, the current $I$ in the circuit varies with time according to the equation
+		\[I = \left(\frac{V}{L}\right)te^{-Rt/(2L)}\]
+		where $V$ is the applied voltage, $L$ is the inductance, and $R$ is the resistance (all of which are constant).
 		
-		\question[10] Fire a nerf gun in the air and film the entire flight from 20 ft away.  Let $\theta$ be the angle between your line-of-sight of the nerf dart and the floor.  What is the rate of change of the angle in terms of t?
+		Suppose an RLC circuit with a resistance of 30.0 volt/amp and an inductance of 0.400 volt $\cdot$ sec/amp is attached to a 12.0-volt voltage source. Find the maximum current that will occur in the circuit.
 			
+		\question[5] 2.	A window is being built and the bottom is a rectangle and the top is a semicircle. If there is 12 meters of framing materials what must the dimensions of the window be to let in the most light?
+		
+		\question[5] Using one sheet of paper, make a triangular box without a lid that maximizes the volume.  This is a competition.  You will get points based on your rank in the class.  You will need to calculate the volume of your box.\\
+		
+		Rules:
+		\begin{itemize}
+			\item The base of the boat must be a triangle
+			\item You are allowed to cut pieces off of your paper and tape them back on.
+		\end{itemize}
 		
 		
 	\end{questions}
