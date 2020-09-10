@@ -13131,10 +13131,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -13153,33 +13153,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pi</span><span class="o">.</span><span class="n">n</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3.14159265358979</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13188,7 +13168,10 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">&#182;</a></h3><p>Use Sage to solve the equation $x^5 + 3x^4 - 5x^3 - 15x^2 + 4x + 12 = 0$ for $x$.</p>
-<p>To define a variable, use <code>x = var('x')</code>.  To solve an equation, use <code>solve(left-hand-side == right-hand-side, variable name)</code>.  For example to solve $x^2 = 4$ your first line would be <code>x = var('x')</code> and your second line would be <code>solve(x^2 == 4, x)</code></p>
+<p>To define a variable, use <code>x = var('x')</code>.  To solve an equation, use <code>solve(left-hand-side == right-hand-side, variable name)</code>.  For example to solve $2x^2 = 8$ you could do</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">solve</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">8</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
@@ -13232,7 +13215,151 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-5">Question 5<a class="anchor-link" href="#Question-5">&#182;</a></h3><p>Let $f(x) = x^2$.  If $f$ is shifted down 4, right 3, and then stretched horizontally by a factor of 2, and then reflected over the $x$-axis, what is the new function?  Plot the each step.</p>
+<h3 id="Question-5">Question 5<a class="anchor-link" href="#Question-5">&#182;</a></h3><p>Mersenne primes are primes of the form $2^p -1$ where $p$ is a smaller prime.  However, it is not always the case that $2^p - 1$ will also be prime.  For instance, $2^{11} - 1$ is not prime.</p>
+<p><strong>a.</strong> Show that $2^7 - 1$ is a Mersenne prime, but $2^{11} - 1$ is not by using <code>(2^p - 1).is_prime()</code> for <code>p=7</code> and <code>p=11</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Factoring is an operationt that gets much slower as numbers get beyond a certain size.  In fact,   To see this, run</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">next_prime</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">pi</span><span class="o">^</span><span class="mi">600</span><span class="p">))</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">is_prime</span><span class="p">()</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;It took &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; seconds to determine if 2^&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-1 = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; is prime&quot;</span><span class="p">)</span>
+</pre></div>
+<p><strong>b.</strong> increase the <code>600</code> by 5's until it runs longer than 5 seconds on your computer.  If your computer runs more than 30 seconds with the <code>600</code>, then click on Kernel &gt; Restart to restart Sage.  Then start from <code>500</code> and go up by 5's.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, one might wonder if how many of the first 10 primes give us Mersenne primes?  We can use Sage to check.  For instance,</p>
+<div class="highlight"><pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="n">Primes</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">P</span><span class="o">.</span><span class="n">unrank</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+<p>will give us the fourth prime (remember that Sage always starts counting with zero).  And</p>
+<div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="mi">2</span><span class="o">^</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">q</span><span class="o">.</span><span class="n">is_prime</span><span class="p">())</span>
+</pre></div>
+<p>will tell us if it gives us a Mersenne prime</p>
+<p><strong>c.</strong> Of the first 10 primes, which of them give us Mersenne primes, and what are the Mersenne primes?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To really harness the power of Sage, we can use lists from Python, the language that Sage is built on.  Lists so easy and powerful to use that we will use them regularly. We will use a fun made-up list for practice, the quote marks mean the items are just text, with no special mathematical meaning. Execute these compute cells as we work through them.</p>
+<div class="highlight"><pre><span></span><span class="n">zoo</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;snake&#39;</span><span class="p">,</span> <span class="s1">&#39;parrot&#39;</span><span class="p">,</span> <span class="s1">&#39;elephant&#39;</span><span class="p">,</span> <span class="s1">&#39;baboon&#39;</span><span class="p">,</span> <span class="s1">&#39;beetle&#39;</span><span class="p">]</span>
+<span class="n">zoo</span>
+</pre></div>
+<p>So the square brackets define the boundaries of our list, commas separate items, and we can give the list a name. To work with just one element of the list, we use the name and a pair of brackets with an index. Notice that lists have indices that begin counting at zero. This will seem odd at first and will seem very natural later.</p>
+<div class="highlight"><pre><span></span><span class="n">zoo</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+<p>We can add a new creature to the zoo, it is joined up at the far right end.</p>
+<div class="highlight"><pre><span></span><span class="n">zoo</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;ostrich&#39;</span><span class="p">);</span> <span class="n">zoo</span>
+</pre></div>
+<p>A construction called a <strong>list comprehension</strong> is especially powerful, especially since it almost exactly mirrors notation we use to describe sets. Suppose we want to form the plural of the names of the creatures in our zoo. We build a new list, based on all of the elements of our old list.</p>
+<div class="highlight"><pre><span></span><span class="n">plurality_zoo</span> <span class="o">=</span> <span class="p">[</span><span class="n">animal</span><span class="o">+</span><span class="s1">&#39;s&#39;</span> <span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">zoo</span><span class="p">]</span>
+<span class="n">plurality_zoo</span>
+</pre></div>
+<p>Another example of list comprehension is</p>
+<div class="highlight"><pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="n">Primes</span><span class="p">()</span>
+<span class="p">[(</span><span class="n">P</span><span class="o">.</span><span class="n">unrank</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+<p>This creates a list of the first 10 primes, but with 1 added and then that number divided by 2.</p>
+<p><strong>d.</strong> Use list comprehension to create a list of $(2^p - 1)$ where $p$ runs over the first 10 primes.  Then use the <code>.is_prime()</code> function to make a second list of <code>True</code> and <code>False</code> values that tell us which are Mersenne primes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you ask Sage to add, subtract, multiply, or divide <code>True</code> or <code>False</code> values, it will treat <code>True</code> like a <code>1</code>, and <code>False</code> like a <code>0</code>.</p>
+<p><strong>e.</strong> Try putting <code>sum()</code> around your second list from part <em>d.</em> to count the Mersenne primes.  Then do it again, but instead of <code>range(10)</code>, try <code>range(350)</code>.  This may take a while for your computer to do.  While you're waiting, make a guess about what the answer will be.  If you're still waiting, trying doing question 7 below.  You don't need your computer to solve that question.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Question-6">Question 6<a class="anchor-link" href="#Question-6">&#182;</a></h3><p>Let $f(x) = x^2$.  If $f$ is shifted down 4, right 3, and then stretched horizontally by a factor of 2, and then reflected over the $x$-axis, what is the new function?  Plot the each step.</p>
 <p>Recall that <code>plot(2*x-1, (-5,5))</code> plots a function <code>2*x-1</code> (assuming you've defined <code>x</code> to be a variable already) with domain -5 to 5.</p>
 
 </div>
@@ -13254,7 +13381,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-6">Question 6<a class="anchor-link" href="#Question-6">&#182;</a></h3><p>In one day, the Grace College store sold 45 sweatshirts.  Hoodies sell for \$15 dollars.  Crewnecks sell for \$10.  In all, the Grace College store sold \$570 worth of sweatshirts.  How much of each did they sell?</p>
+<h3 id="Question-7">Question 7<a class="anchor-link" href="#Question-7">&#182;</a></h3><p>In one day, the Grace College store sold 45 sweatshirts.  Hoodies sell for \$15 dollars.  Crewnecks sell for \$10.  In all, the Grace College store sold \$570 worth of sweatshirts.  How much of each did they sell?</p>
 
 </div>
 </div>
