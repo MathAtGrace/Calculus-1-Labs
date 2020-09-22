@@ -13756,7 +13756,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li>$g(x)=3x^{4/3}-3x+9$</li>
+<li>$g(x)=x^3 - 7x + 6$</li>
 </ol>
 <p>&nbsp;</p>
 <ol>
@@ -13769,6 +13769,150 @@ div#notebook {
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">9</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>x^3 - 7*x + 6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">assume</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;real&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">find_root</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-25-5d69d4d3d3b1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>find_root<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">-</span>Integer<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> Integer<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/sagemath-9.0/local/lib/python3.7/site-packages/sage/misc/lazy_import.pyx</span> in <span class="ansi-cyan-fg">sage.misc.lazy_import.LazyImport.__call__ (build/cythonized/sage/misc/lazy_import.c:3686)</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    351</span>             <span class="ansi-green-fg">True</span>
+<span class="ansi-green-intense-fg ansi-bold">    352</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">--&gt; 353</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>get_object<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    354</span> 
+<span class="ansi-green-intense-fg ansi-bold">    355</span>     <span class="ansi-green-fg">def</span> __repr__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/sagemath-9.0/local/lib/python3.7/site-packages/sage/numerical/optimize.py</span> in <span class="ansi-cyan-fg">find_root</span><span class="ansi-blue-fg">(f, a, b, xtol, rtol, maxiter, full_output)</span>
+<span class="ansi-green-intense-fg ansi-bold">    104</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    105</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 106</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> f<span class="ansi-blue-fg">.</span>find_root<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">=</span>a<span class="ansi-blue-fg">,</span>b<span class="ansi-blue-fg">=</span>b<span class="ansi-blue-fg">,</span>xtol<span class="ansi-blue-fg">=</span>xtol<span class="ansi-blue-fg">,</span>rtol<span class="ansi-blue-fg">=</span>rtol<span class="ansi-blue-fg">,</span>maxiter<span class="ansi-blue-fg">=</span>maxiter<span class="ansi-blue-fg">,</span>full_output<span class="ansi-blue-fg">=</span>full_output<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    107</span>     <span class="ansi-green-fg">except</span> AttributeError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    108</span>         <span class="ansi-green-fg">pass</span>
+
+<span class="ansi-green-fg">/opt/sagemath-9.0/local/lib/python3.7/site-packages/sage/symbolic/expression.pyx</span> in <span class="ansi-cyan-fg">sage.symbolic.expression.Expression.find_root (build/cythonized/sage/symbolic/expression.cpp:61866)</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">  11808</span>         <span class="ansi-green-fg">elif</span> self<span class="ansi-blue-fg">.</span>number_of_arguments<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">  11809</span>             f <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_fast_float_<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>default_variable<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">&gt; 11810</span><span class="ansi-red-fg">             return find_root(f, a=a, b=b, xtol=xtol,
+</span><span class="ansi-green-intense-fg ansi-bold">  11811</span>                              rtol<span class="ansi-blue-fg">=</span>rtol<span class="ansi-blue-fg">,</span>maxiter<span class="ansi-blue-fg">=</span>maxiter<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">  11812</span>                              full_output=full_output)
+
+<span class="ansi-green-fg">/opt/sagemath-9.0/local/lib/python3.7/site-packages/sage/numerical/optimize.py</span> in <span class="ansi-cyan-fg">find_root</span><span class="ansi-blue-fg">(f, a, b, xtol, rtol, maxiter, full_output)</span>
+<span class="ansi-green-intense-fg ansi-bold">    110</span>     <span class="ansi-green-fg">if</span> a <span class="ansi-blue-fg">&gt;</span> b<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    111</span>         a<span class="ansi-blue-fg">,</span> b <span class="ansi-blue-fg">=</span> b<span class="ansi-blue-fg">,</span> a
+<span class="ansi-green-fg">--&gt; 112</span><span class="ansi-red-fg">     </span>left <span class="ansi-blue-fg">=</span> f<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    113</span>     right <span class="ansi-blue-fg">=</span> f<span class="ansi-blue-fg">(</span>b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    114</span> 
+
+<span class="ansi-green-fg">/opt/sagemath-9.0/local/lib/python3.7/site-packages/sage/ext/fast_eval.pyx</span> in <span class="ansi-cyan-fg">sage.ext.fast_eval.FastDoubleFunc.__call__ (build/cythonized/sage/ext/fast_eval.c:6007)</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    639</span>         <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">from</span> <span class="ansi-cyan-fg">0</span> <span class="ansi-blue-fg">&lt;=</span> i <span class="ansi-blue-fg">&lt;</span> self<span class="ansi-blue-fg">.</span>nargs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    640</span>             self<span class="ansi-blue-fg">.</span>argv<span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> args<span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">--&gt; 641</span><span class="ansi-red-fg">         </span>res <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_call_c<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>argv<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    642</span>         <span class="ansi-green-fg">return</span> res
+<span class="ansi-green-intense-fg ansi-bold">    643</span> 
+
+<span class="ansi-green-fg">/opt/sagemath-9.0/local/lib/python3.7/site-packages/sage/ext/fast_eval.pyx</span> in <span class="ansi-cyan-fg">sage.ext.fast_eval.FastDoubleFunc._call_c (build/cythonized/sage/ext/fast_eval.c:6089)</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    647</span>         cdef int i<span class="ansi-blue-fg">,</span> top <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span>
+<span class="ansi-green-intense-fg ansi-bold">    648</span>         <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">from</span> <span class="ansi-cyan-fg">0</span> <span class="ansi-blue-fg">&lt;=</span> i <span class="ansi-blue-fg">&lt;</span> self<span class="ansi-blue-fg">.</span>nops<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 649</span><span class="ansi-red-fg">             </span>top <span class="ansi-blue-fg">=</span> process_op<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>ops<span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>stack<span class="ansi-blue-fg">,</span> argv<span class="ansi-blue-fg">,</span> top<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    650</span>         cdef double res <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>stack<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    651</span>         <span class="ansi-green-fg">return</span> res
+
+<span class="ansi-green-fg">/opt/sagemath-9.0/local/lib/python3.7/site-packages/sage/ext/fast_eval.pyx</span> in <span class="ansi-cyan-fg">sage.ext.fast_eval.process_op (build/cythonized/sage/ext/fast_eval.c:3934)</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    374</span>     <span class="ansi-green-fg">elif</span> op<span class="ansi-blue-fg">.</span>type <span class="ansi-blue-fg">==</span> POW<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    375</span>         <span class="ansi-green-fg">if</span> stack<span class="ansi-blue-fg">[</span>top<span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">&lt;</span> <span class="ansi-cyan-fg">0</span> <span class="ansi-green-fg">and</span> stack<span class="ansi-blue-fg">[</span>top<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">!=</span> floor<span class="ansi-blue-fg">(</span>stack<span class="ansi-blue-fg">[</span>top<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 376</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;negative number to a fractional power not real&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    377</span>         stack<span class="ansi-blue-fg">[</span>top<span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> pow<span class="ansi-blue-fg">(</span>stack<span class="ansi-blue-fg">[</span>top<span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> stack<span class="ansi-blue-fg">[</span>top<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    378</span>         <span class="ansi-green-fg">return</span> top<span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span>
+
+<span class="ansi-red-fg">ValueError</span>: negative number to a fractional power not real</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
